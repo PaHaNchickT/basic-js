@@ -1,47 +1,48 @@
-# BasicJS
+# Basic JS
 
-⚠️ DO NOT SUBMIT PULL REQUESTS TO THIS REPO ⚠️
-
----
-
-#### Prerequisites
-1. Install [Node.js](https://nodejs.org/en/download/)   
-2. Fork this repository: https://github.com/AlreadyBored/basic-js
-3. Clone your newly created repo: https://github.com/<%your_github_username%>/basic-js/  
-4. Go to folder `basic-js`  
-5. To install all dependencies use [`npm install`](https://docs.npmjs.com/cli/install)  
-6. Run `npm run test` in command line.
-7. You will see the number of pending, passing and failing tests. 100% of passing tests is equal to max score for the task
+⚠️ НЕ ОТПРАВЛЯЙТЕ ПУЛЛРЕКВЕСТЫ В ЭТОТ РЕПОЗИТОРИЙ ⚠️
 
 ---
 
-#### Submit to [rs app](https://app.rs.school)
-1. Open [rs app](https://app.rs.school) and login
-2. Go to submit task page
-3. Select your task (BasicJS)
-4. Press the submit button and enjoy
+#### Предварительные шаги
+1. Установите [Node.js](https://nodejs.org/en/download/)   
+2. Сделайте форк этого репозитория: https://github.com/AlreadyBored/basic-js
+3. Склонируйте себе этот репозиторий: https://github.com/<%your_github_username%>/basic-js/  
+4. Перейдите в папку `basic-js`  
+5. Вбейте в командную строку [`npm install`](https://docs.npmjs.com/cli/install) для установки зависимостей  
+6. Выполните `npm run test` в командой строке.
+7. Вы увидите число ожидающих (pending), проходящих и падающих тестов. 100% проходящие тесты сооветствуют максимальному баллу за задание.
 
 ---
 
-#### Notes
-1. We recommend you to use Node.js of version 14.x.x LTS. If you use any of features, that does not supported by Node.js v14, there may be problems with task submit.
-2. Please, be sure that each of your tests is limited to 30 sec.
+#### Отправка в [rs app](https://app.rs.school)
+1. Откройте [rs app](https://app.rs.school) и залогиньтесь
+2. Перейдите на страницу отправки задания
+3. Выберите задание (BasicJS)
+4. Нажмите кнопку "Submit"
 
 ---
 
-## General task description
-Your task is to write several functions that are the solution to the subtasks. Subtasks descriptions, as well as instructions on how to run tests and submit solutions are below.
+#### Внимание!
+1. Рекомендуется использовать 14.x.x LTS версию Node.js. Если вы используете фичи, которые не поддерживаются 14 версией, могут быть проблемы с автопроверкой задания.
+2. Перед отправкой результата убедитесь, что каждый ваш тест проходит не более чем за 30 секунд.
 
 ---
 
-### **Count cats!**
+## Общее описание задачи
+
+Ваша задача — написать несколько функций, являющихся решением подзадач. Описания подзадач, а также инструкции по запуску тестов и отправке решений находятся ниже.
+
+---
+
+### **Сосчитай котов!**
 
 ![Count cats!](https://vg5b2ejdwb-flywheel.netdna-ssl.com/wp-content/uploads/2019/11/cats-in-boxes-03.jpg)  
-Your task is to count the cats hidden in the backyard (presented by two-dimensional `Array`). Cats hide well, but their **ears** (`"^^"`) are clearly visible. Your task is to implement the `countCats(backyard)` function that will count cats. Good luck!
+Ваша задача — сосчитать котов, спрятавшихся на заднем дворе (представленном в виде двумерного массива, `Array`). Коты прячутся хорошо, но их **ушки** (`"^^"`) видны очень хорошо. Ваша задача — реализовать функцию `countCats(backyard)`, которая сосчитает котов. Удачи!
 
-Number of cats found should be `number`. If no cats found, function should return `0`.
+Число найденных котов должно иметь тип `number`. Если коты не найдены, функция должна вернуть `0`.
 
-For example:
+Например:
 
 `countCats([
     [0, 1, '^^'],
@@ -49,166 +50,163 @@ For example:
     ['^^', 1, 2]
   ])` => `3`
 
-Write your code in `src/count-cats.js`.
+Напишите ваш код в `src/count-cats.js`.
 
 ---
 
-### **Carbon dating**
+### **Углеродное датирование**
 
 ![Carbon dating](https://earthhow.com/wp-content/uploads/2018/12/Carbon-Dating-678x378.png)  
-To determine the age of archaeological finds, **radioisotope dating** is widely used. One of its types is **radiocarbon dating**.
+Для определения возраста археологических находок широко применяется **радиоизотопный анализ**. Один из его видов — **радиоуглеродный анализ**.
 
-The approximate age of the sample is calculated by measuring the **ratio** of the **modern** activity of the C14 isotope to the activity of the same isotope in the **sample**.
+Примерный возраст образца рассчитывается при помощи измерения **соотношения** между **современной** активностью изотопа С14 и активностью этого же изотопа в **образце**.
 
-[Read about method](https://chem.libretexts.org/Bookshelves/Physical_and_Theoretical_Chemistry_Textbook_Maps/Supplemental_Modules_(Physical_and_Theoretical_Chemistry)/Nuclear_Chemistry/Nuclear_Kinetics/Half-Lives_and_Radioactive_Decay_Kinetics#section_2)
+[Почитайте о методе](https://chem.libretexts.org/Bookshelves/Physical_and_Theoretical_Chemistry_Textbook_Maps/Supplemental_Modules_(Physical_and_Theoretical_Chemistry)/Nuclear_Chemistry/Nuclear_Kinetics/Half-Lives_and_Radioactive_Decay_Kinetics#section_2)
 
 ---
 <details>
 
-  <summary>About calculations</summary>
-  You can use the formula from the article at the link above. 0.693 is an approximation of the natural logarithm of two.
+  <summary>О расчетах</summary>
+  Вы можете использовать формулу из статьи по ссылке выше. 0.693 — это приблизительное значение натурального логарифма двойки.
 
 </details>
 
 ---
 
-Your task is to implement the function `dateSample(sampleActivity)` that calculates sample approximate age (in years). Please use given `MODERN_ACTIVITY` and `HALF_LIFE_PERIOD`.
+Ваша задача — реализовать функцию `dateSample(sampleActivity)`, которая рассчитывает примерный возраст образца (в годах). Пожалуйста, используйте данные `MODERN_ACTIVITY` и `HALF_LIFE_PERIOD`.
 
-Function parameter `sampleActivity` is a `string`. Calculated sample age must be `number`.
+Параметр функции `sampleActivity` имеет тип `string`. Рассчитаный возраст образца должен иметь тип `number`. Возраст должен быть **целочисленным**. Возраст должен **округлен вверх** (при получении целого числа). В случае неправильного **типа** входного параметра или **несоответствующем** значении активности, или отсутствии аргумента функция должна вернуть `false`.
 
-Age must be **integer**. Age must be **rounded up** (ceiling). In case of wrong input parameter **type** or **inadequate** activity value or **absence** of argument function must return `false`.
+Например:
 
-For example:
-
-`dateSample('1')` => `22387` (or `22392` depending on formula used)
+`dateSample('1')` => `22387` (либо `22392`, в зависимости от используемой формулы)
 
 `dateSample('WOOT!')` => `false`
 
-Write your code in `src/carbon-dating.js`.
+Напишите ваш код в `src/carbon-dating.js`.
 
 ---
 
-### **Dream team**
+### **Команда мечты**
 
 ![Dream team](https://i0.wp.com/www.comicsbeat.com/wp-content/uploads/2021/05/power-rangers.jpg?fit=1420,945&ssl=1)  
-Imagine you and your friends decide to create a **dream team**. This team should have a cool secret name that contains encrypted information about it. For example, these may be the **first letters** of the names of its members in **upper case** **sorted alphabetically**.
-Your task is to implement the `createDreamTeam(members)` function that returns name of a newly made team (`string`) based on the names of its members (`Array`). Good luck!
+Представьте себе, что вы с вашими друзьями решаете создать **команду мечты**. Эта команда должна иметь крутое секретное название, в котором зашифрована информация о ней. Например, это могут быть **первые буквы** имен ее членов **в верхнем регистре**, **отсортированные по алфавиту**.
 
-Names of the members should be `strings`. Values with other **type** should be **ignored**. In case of wrong `members` **type** function must return `false`.
+Ваша задача — реализовать функцию `createDreamTeam(members)`, которая возвращает имя только что созданной команды (`string`), основанной на именах ее членов (`array`). Удачи!
 
-NB! Team member name may contain **whitespaces**.
+Имена членов команды должны быть типа `string`. Значения другого типа должны быть **проигнорированы**. В случае неправильного **типа** аргумента `members` функция должна вернуть `false`.
 
-For example:
+NB! Имя члена команды может содержать **пробелы**.
+
+Например:
 
 `createDreamTeam(['Matt', 'Ann', 'Dmitry', 'Max'])` => `'ADMM'`
 
 `createDreamTeam(['Olivia', 1111, 'Lily', 'Oscar', true, null])` => `'LOO'`
 
-Write your code in `src/dream-team.js`.
+Напишите ваш код в `src/dream-team.js`.
 
 ---
 
-### **What season?**
+### **Какая пора года??**
 
 ![What season](https://images.twinkl.co.uk/tw1n/image/private/t_630_eco/image_repo/83/d2/T-T-224-four-seasons-posters-a4_ver_2.avif)  
-Your task is to implement the function `getSeason(date)` that accepts `Date` object and returns the time of the year that matches it.
-Time of the year must be `string`.
+Ваша задача — реализовать функцию `getSeason(date)`, которая принимает объект `Date` и возвращает соответствующую ему пору года. Пора года должна быть типа `string`.
 
 ---
 <details>
 
-<summary>Seasons in English</summary>
-The names of the seasons in English are: spring, summer, autumn (fall), winter.
+<summary>Названия пор года в англиийском языке</summary>
+В английском поры года имеют следующие наименования: весна — spring, лето — summer, осень — autumn (fall), зима — winter.
 
 </details>
 
 ---
 
-If the `date` argument was not passed, the function must return the `string` `'Unable to determine the time of year!'`. If the `date` argument is **invalid**, the function must throw an `Error` with message `Invalid date!`.
+Если аргумент `date` не был передан, функция должна вернуть строку `'Unable to determine the time of year!'` Если аргумент `date` **некорректный**, функция должна выбросить ошибку (`Error`) с сообщением `Invalid date!`.
 
-Shh! An enemy scout has lurked among the arguments that come into this function.
+Тссс! Среди аргументов, которые попадают в эту функцию, затесался вражеский агент.
 
 ![Disguised](https://www.famousbirthdays.com/faces/disguised-toast-image.jpg)  
-He is guided by the famous proverb: “If it looks like a **duck**, swims like a **duck** and quacks like a **duck**, then it probably is a **duck** (who cares what it **really** is)”. He is **expertly disguised** as a real date, but a clever javascript developer can catch him and `throw` an `Error` with message `Invalid date!` just in time!
+Он руководствуется знаменитой поговоркой: "Если это выглядит как **утка**, плавает как **утка**, и крякает как **утка**, тогда это, скорее всего, **утка** (и неважно, что это **на самом деле**)". Он **искусно маскируется** под настоящую дату (`date`), но умелый javascript-разработчик может поймать его и выбросить ошибку с сообщением `Invalid date!` как раз вовремя!
 
-For example:
+Например:
 
 `const springDate = new Date(2020, 02, 31)`
 
 `getSeason(springDate)` => `'spring'`
 
-Write your code in `src/what-season.js`.
+Напишите ваш код в `src/what-season.js`.
 
 ---
 
-### **Tower of Hanoi**
+### **Ханойская башня**
 
-![Tower of hanoi visualisation](https://ioecapsule.com/wp-content/uploads/2019/08/tower_of_hanoi_3_disks.gif)  
-[Tower of Hanoi](https://www.britannica.com/topic/Tower-of-Hanoi) is famous mathematical puzzle of the 18th century.
-It consists of three rods and a number of disks of different sizes, which can slide onto any rod. The puzzle starts with the disks in a neat stack in ascending order of size on one rod, the smallest at the top, thus making a conical shape.
+![Визуализация алгоритма](https://ioecapsule.com/wp-content/uploads/2019/08/tower_of_hanoi_3_disks.gif)  
+[Ханойская башня](https://www.britannica.com/topic/Tower-of-Hanoi) — знаменитая математическая головоломка 18 столетия.
+Она состоит из трех стержней и некоторого числа дисков разных размеров, которые могут быть надеты на стержень. Головоломка начинается с того, что диски расположены друг на друге, причем наименьший расположен сверху. Диски образуют конус.
 
-The objective of the puzzle is to move the entire stack to another rod, obeying the following simple **rules**:
-* Only **one** disk can be moved at a time.
-* Each move consists of taking the **upper** disk from one of the stacks and placing it on **top** of another stack or on an empty rod.
-* No **larger** disk may be placed on top of a **smaller** disk.
+Цель головоломки — переместить всю стопку на другой стержень, следуя этим простым **правилам**:
+* перемещать можно только **один** диск за раз
+* можно брать только **верхний** диск с одной из стопок и помещать на **верхушку** другой стопки или на пустой стержень
+* диск **большего** размера нельзя класть на диск **меньшего** размера
 
-Your task is much easier than coming up with an algorithm that solves this puzzle :)
+Ваша задача значительно легче, чем придумывать алгоритм, решающий эту задачу :)
 
-Implement the function `calculateHanoi` that accepts `diskNumber` and `turnsSpeed` parameters. `diskNumber` is a number of **disks** and `turnsSpeed` is the speed of moving discs (in **turns** per **hour**).
-Both parameters are `numbers`.
+Реализуйте функцию `calculateHanoi`, которая принимает параметры `diskNumber` и `turnsSpeed`. `diskNumber` — это число **дисков**, а `turnsSpeed` — скорость перемещения дисков (в **ходах** в **час**). Оба параметра являются числами (тип `number`)
 
-`calculateHanoi` function returns an object with 2 properties:
-* `turns` (minimum `number` of turns to solve the puzzle)
-* `seconds` (minimum `number` of **seconds** to solve the puzzle at a given `turnsSpeed`, seconds must be an integer, obtained  from **rounded down** (floor) calculation result)
+Функция `calculateHanoi` возвращает объект с 2 свойствами:
+* `turns` (минимальное число (тип `number`) ходов, необходимое для решения головоломки)
+* `seconds` (минимальное число (тип `number`) **секунд**, необходимое для решения головоломки при заданной скорости; должно быть целым числом, полученным в результате округления результата расчетов в меньшую **(floor)** сторону)
 
-You don't need to validate parameters.
+Вам не нужно валидировать входные параметры.
 
-For example:
+Например:
 
 `calculateHanoi(9, 4308)` => `{ turns: 511, seconds: 427 }`
 
-Write your code in `src/hanoi-tower.js`.
+Напишите ваш код в `src/hanoi-tower.js`.
 
 ---
 
-### **Transform array**
+### **Преобразование массива**
 
 ![Transform array](https://www.capturehighered.com/wp-content/uploads/2019/02/The-Call-720x332.jpg)  
-Your task is to implement the function `transform(arr)` that takes an `array` and returns **transformed** array, based on the **control sequences** that `arr` contains.
-**Control sequences** are defined `string` elements of the mentioned `array`:
-* `--discard-next` excludes the next element of the array from the transformed array.
-* `--discard-prev` excludes the previous element of the array from the transformed array.
-* `--double-next` duplicates the next element of the array in the transformed array.
-* `--double-prev` duplicates the previous element of the array in the transformed array.
+Ваша задача — реализовать функцию `transform(arr)`, которая принимает массив (тип `array`) и возвращает **преобразованный** массив, основываясь на **управляющих последовательностях**, которые содержит `arr`. **Управляющие последовательности** — это определенные строковые элементы вышеупомянутого массива:
+* `--discard-next` исключает следующий за ней элемент исходного массива из преобразованного массива.
+* `--discard-prev` исключает предшествующий ей элемент исходного массива из преобразованного массива.
+* `--double-next` дублирует следующий за ней элемент исходного массива в преобразованном массиве.
+* `--double-prev` дублирует предшествующий ей элемент исходного массива в преобразованном массиве.
 
-For example:
+Например:
 
 `transform([1, 2, 3, '--double-next', 4, 5])` => `[1, 2, 3, 4, 4, 5]`
 
 `transform([1, 2, 3, '--discard-prev', 4, 5])` => `[1, 2, 4, 5]`
 
-The function must not affect inital array. Control sequences are applied **from left to right** to initial array elements. Control sequences **do not fall** into the transformed array. Control sequences in initial array don't occur in a row. If there is **no element** next to the control sequence **to which it can be applied** in the initial array, or this element was previously deleted, **it does nothing**. The function should throw an `Error` with message `'arr' parameter must be an instance of the Array!` if the `arr` is not an `Array`.
+Функция не должна изменять исходный массив. Управляющие последовательности применяются **последовательно, слева направо** к элементам из исходного массива. Управляющие последовательности **не попадают** в преобразованный массив. Управляющие последовательности в исходном массиве не встречаются подряд (не следуют одна за другой). Если около управляющей последовательности **нет элемента**, к которому она может быть применена в исходном массиве, либо он был удален в процессе преобразования массива, **она не делает ничего**. Функция должна выбросить ошибку с сообщением `'arr' parameter must be an instance of the Array!`, если `arr` не является массивом.
 
-Write your code in `src/transform-array.js`.
+Напишите свой код в `src/transform-array.js`.
 
 ---
 
-### **Chain maker**
+### **Чейнмейкер**
 
 ![Chaining](https://www.sdxcentral.com/cdn-cgi/image/w=748,h=374,fit=scale-down,f=auto,q=30/https://www.sdxcentral.com/wp-content/uploads/2018/08/Why-Problems-With-Service-Chaining-Are-Stalling-NFV.jpg)  
-Let's practice in [chaining](https://en.wikipedia.org/wiki/Method_chaining)!
+Давайте попрактикуемся в [чейнинге](https://en.wikipedia.org/wiki/Method_chaining)!
 
-Your task is to create the object `chainMaker` that creates chains. The finished chain is a `string` and looks like this: `'( value1 )~~( value2 )~~( value3 )'`.
-The `chainMaker` has several **methods** for creating chains and modifying them:
-* `getLength` returns the current chain length as a number;
-* `addLink(value)` adds a link containing a `string` representation of the `value` to the chain;
-* `removeLink(position)` removes a chain link in the specified position;
-* `reverseChain` reverses the chain;
-* `finishChain` ends the chain and `returns` it.
+Ваша задача — реализовать объект `chainMaker`, который будет создавать цепочки. Оконченная цепочка это строка (тип `string`) и выглядит следующим образом: `'( value1 )~~( value2 )~~( value3 )'`.
 
-`addLink`, `reverseChain` and `removeLink` methods are **chainable**, while the another ones are not. If `addLink` is called with no arguments, it adds an empty link (`'(  )'`) to the chain. If `removeLink` accepts **invalid** `position` (e.g. not a number, or a fractional number, or corresponding to a nonexistent link), it must throw an `Error` with message `You can't remove incorrect link!`. After calling the `finishChain` method, the existing chain must be deleted, as if an `Error` was thrown.
+`chainMaker` имееет несколько **методов** для создания цепочек и их модификации:
+* `getLength` возвращает текущую длину цепи в виде числа;
+* `addLink(value)` добавляет звено, содержащее строковое представление `value` к цепочке;
+* `removeLink(position)` удаляет звено цепи, находящееся в заданном положении;
+* `reverseChain` разворачивает цепь задом наперед;
+* `finishChain` завершает цепь и **возвращает** ее.
 
-For example:
+Методы `addLink`, `reverseChain` и `removeLink` **чейнятся**, в то время как остальные – нет. Если `addLink` вызван без аргументов, он добавляет пустое звено (`'(  )'`) в цепочку. Если `removeLink` принимает **некорректную** позицию (например, не являющуюся числом, или дробное число, или ссылающуюся на несуществующее звено), он должен выбросить **ошибку** с сообщением `You can't remove incorrect link!`. После вызова метода `finishChain` существующая на данный момент цепь должна быть удалена, как и в случае, если была выброшена **ошибка**.
+
+Например:
 
 `chainMaker.addLink(1).addLink(2).addLink(3).finishChain()` => `'( 1 )~~( 2 )~~( 3 )'`
 
@@ -216,18 +214,18 @@ For example:
 
 `chainMaker.addLink(1).addLink(2).reverseChain().addLink(3).finishChain()` => `'( 2 )~~( 1 )~~( 3 )'`
 
-Write your code in `src/simple-chain.js`.
+Напишите ваш код в `src/simple-chain.js`.
 
 ---
 
-### **Recursive depth calculator**
+### **Рекурсивный вычислитель глубины**
 
-![Go deeper](https://i.imgur.com/k7lADiM.jpg)  
-Your task is to implement the class `DepthCalculator` with method `calculateDepth` that takes an `array` and returns its depth.
+![Идти глубже](https://i.imgur.com/k7lADiM.jpg)  
+Ваша задача — реализовать класс `DepthCalculator` с методом `calculateDepth`, который принимает массив и возвращает его **глубину**.
 
-`calculateDepth` method must pass the given array **recursively**. Depth of a **flat** array is 1. Method must correctly work with `arrays` that contain no elements or contain empty `arrays`.
+Метод `calculateDepth` должен проходить полученный массив **рекурсивно**. Глубина **плоского** массива — 1. Метод должен корректно работать с массивами, не содержащими элементов или содержащими пустые массивы.
 
-For example:
+Например:
 
 `const depthCalc = new DepthCalculator();`
 
@@ -237,55 +235,56 @@ For example:
 
 `depthCalc.calculateDepth([[[]]])` => `3`
 
-Write your code in `src/recursive-depth.js`.
+Напишите ваш код в `src/recursive-depth.js`.
 
 ---
-### **Extended repeater**
+### **Расширенный повторитель**
 
 ![Extended repater](https://farm5.staticflickr.com/4683/39024400961_732f449b65.jpg)  
-Your task is to implement the function `repeater(str, options)`.
-This function returns a repeating `string` based on the given parameters:
-* `str` is a `string` to repeat;
-* `options` is an `object` of options, that contains properties:
-  * `repeatTimes` sets the `number` of repetitions of the `str`;
-  * `separator` is a `string` separating repetitions of the `str`;
-  * `addition` is an additional `string` that will be added to each repetition of the `str`;
-  * `additionRepeatTimes` sets the `number` of repetitions of the `addition`;
-  * `additionSeparator` is a `string` separating repetitions of the `addition`.
+Ваша задача — реализовать функцию `repeater(str, options)`.
+Эта функция возвращает повторяющуюся **строку**, основываясь на заданных параметрах:
+*	`str` это **строка**, которая будет повторена
+*	`options` это **объект** опций, который содержит следующие свойства:
+  -	`repeatTimes` устанавливает число повторений `str`
+  - `separator` это строка, разделяющая повторения `str`
+  - `addition` это дополнительная строка, которая будет добавлена после каждого повторения `str`
+  - `additionRepeatTimes` устанавливает число повторений `addition`
+  - `additionSeparator` это строка, разделяющая повторения `addition`
 
-The `str` and `addition` parameters are `strings` by default. In case when **type** of these parameters is different, they must be converted to a `string`.
+Параметры `str` и `addition` по умолчанию являются **строками**. В случае, если они другого типа, он должны быть преобразованы к строке.
+ 
+Параметры `separator` и `additionSeparator` являются строками.
 
-`separator` and `additionSeparator` parameters are `strings`. 
+`repeatTimes` и `additionRepeatTimes` являются целыми числами (в случае отсутствия любого из них соответствующая строка не повторяется).
 
-`repeatTimes` and `additionRepeatTimes` are integer `numbers` (in the absence of any of them, the corresponding string is not repeated).
+Единственный обязательный параметр — это `str`, остальные могут не быть переданы.
+Значение `separator` по умолчанию это `'+'`. Значение `additionSeparator` по умолчанию это `'|'`.
 
-The only indispensable parameter is `str`, any others may be not defined. `separator` default value is `'+'`. `additionSeparator` default value is `'|'`.
+Например: `repeater('STRING', { repeatTimes: 3, separator: '**', addition: 'PLUS', additionRepeatTimes: 3, additionSeparator: '00' })` => `'STRINGPLUS00PLUS00PLUS**STRINGPLUS00PLUS00PLUS**STRINGPLUS00PLUS00PLUS'`
 
-For example: `repeater('STRING', { repeatTimes: 3, separator: '**', addition: 'PLUS', additionRepeatTimes: 3, additionSeparator: '00' })` => `'STRINGPLUS00PLUS00PLUS**STRINGPLUS00PLUS00PLUS**STRINGPLUS00PLUS00PLUS'`
-
-Write your code in `src/extended-repeater.js`.
+Напишите свой код в `src/extended-repeater.js`.
 
 ---
 
-### **Vigenere cipher**
+### **Шифр Виженера**
 
 ![Ciphering machine](https://live.staticflickr.com/1931/44960892745_471bee66bb_b.jpg)  
-Cryptography is awesome! Let's try to organize production of encryption machines. Our machines will use one of the encryption methods that are easy to understand, but also not amenable to simple cryptanalysis - the [**Vigenere cipher**](https://en.wikipedia.org/wiki/Vigen%C3%A8re_cipher).
+Криптография — это здорово! Давайте попробуем наладить производство шифровальных машин. Наши машины будут использовать один из методов шифрования, которые легки для понимания, но не могут быть разгаданы посредством простого криптоанализа — [**шифр Виженера**](https://en.wikipedia.org/wiki/Vigen%C3%A8re_cipher).
 
-Our machine will have 2 modifications: **direct** and **reverse** (the type of machine is determined at the moment of creation). The **direct** machine simply encodes and decodes the string that was transmitted to it, and the **reverse** machine returns an **inverted** string after encoding and decoding.
+Наша машина будет иметь 2 модификации: **прямая** и **обратная** (тип машины определяется в момент создания). **Прямая** машина просто шифрует и дешифрует строку, переданную в нее, а **обратная** машина возвращает **перевернутую** задом наперед строку после шифрования и дешифрования.
 
-Your task is to implement the class `VigenereCipheringMachine`. `constructor` of this `class` accepts `true` (**or nothing**) to create **direct** machine and `false` to create **reverse** machine.
-Each instance of `VigenereCipheringMachine` must have 2 methods: `encrypt` and `decrypt`. 
+Ваша задача — реализовать класс `VigenereCipheringMachine`. `constructor` этого класса принимает `true` (**или ничего**), чтобы создать **прямую** машину и `false`, чтобы создать **обратную** машину.
+Каждый экземляр `VigenereCipheringMachine` должен иметь 2 метода: `encrypt` и `decrypt`.
 
-`encrypt` method accepts 2 parameters: `message` (`string` to encode) and `key` (`string`-keyword).
+Метод `encrypt` принимает 2 параметра: `message` (строка, чтобы ее зашифровать) и `key` (строку-кодовое слово).
 
-`decrypt` method accepts 2 parameters: `encryptedMessage` (`string` to decode) and `key` (`string`-keyword).
+Метод `decrypt` принимает 2 параметра: `message` (строка, чтобы ее расшифровать) и `key` (строку-кодовое слово)
 
-These parameters for both methods are **mandatory**. If at least one of them has not been given, an `Error` with message `Incorrect arguments!` must be thrown. The text returned by these methods must be **uppercase**. Machines encrypt and decrypt **only latin alphabet** (all other symbols remain unchanged).
+Эти параметры для обоих методов являются **обязательными**. Если хотя бы один из них не был передан, должна быть выброшена ошибка с сообщением `Incorrect arguments!`. Машины шифруют и дешифруют **только символы латинского алфавита** (другие символы не изменяются). Строка, возвращаемая этими методами, должна иметь **верхний регистр**.
 
-You don't need to validate value sent to `constructor` and to `encrypt` and `decrypt` methods (except throwing an `Error` on absence of argument for these methods).
+Вам не нужно валидировать значение, переданное в `contructor` и в методы `encrypt` и `decrypt` (за исключением выбрасывания ошибки при отсутствии аргумента для для этих методов).
 
-For example:
+Например:
 
 `const directMachine = new VigenereCipheringMachine();`
 
@@ -299,93 +298,94 @@ For example:
 
 `reverseMachine.decrypt('AEIHQX SX DLLU!', 'alphonse')` => `'!NWAD TA KCATTA'`
 
-Write your code in `src/vigenere-cipher.js`.
+Напишите свой код в `src/vigenere-cipher.js`.
 
 ---
 
-### **(ST) Common character count**
-Your task is to implement function that accepts two **strings** (`s1` and `s2`) and returns **number** of common characters between them.
+### **Сосчитать общие символы**
+Ваша задача — реализовать функцию, которая принимает 2 **строки** (`s1` и `s2`) и возвращает **число** их общих символов.
 
-For example:
+Например:
 
 `getCommonCharacterCount('aabcc', 'adcaa')` => `3`
 
-Write your code in `src/common-character-count.js`.
+Напишите свой код в `src/common-character-count.js`.
 
 ---
 
-### **(ST) Delete digit**
-Your task is to implement function that accepts **integer number** (`n`) and returns maximal **number** you can obtain by deleting exactly one digit of the given number.
+### **Удалить цифру**
+Ваша задача — реализовать функцию, которая принимает **целое число** (`n`) и возрващает **максимальное число**, котороые можно получить путем удаления **ровно одной цифры** из данного числа.
 
-For example:
+Например:
 
-`deleteDigit(152) => 52`
+`deleteDigit(152)` => `52`
 
-Write your code in `src/delete-digit.js`.
+Напишите свой код в `src/delete-digit.js`.
 
 ---
 
-### **(ST) DNS stat**
-Your task is to implement function that accepts an **array** of domains (`domains`) and returns the **object** with the appearances of the DNS.
+### **Доменные имена**
+Ваша задача — реализовать функцию, которая принимает **массив** доменов (`domains`) и возвращает **объет** с имеющимися в нем DNS.
 
-For example:
+Например:
 
 `getDNSStats(['code.yandex.ru', 'music.yandex.ru', 'yandex.ru'])` => `{'.ru': 3, '.ru.yandex': 3, '.ru.yandex.code': 1,'.ru.yandex.music': 1}`
 
-Write your code in `src/dns-stats.js`.
+Напишите свой код в `src/dns-stats.js`.
 
 ---
 
-### **(ST) Encode line**
-Your task is to implement function that accepts **string** (`str`) and returns its encoded version.
+### **Закодируйте строку**
 
-For example:
+Ваша задача — реализовать функцию, которая принимает **строку** (`str`) и возвращает ее закодированную версию.
+
+Например:
 
 `encodeLine('aabbbc')` => `'2a3bc'`
 
-Write your code in `src/encode-line.js`.
+Напишите свой код в `src/encode-line.js`.
 
 ---
 
-### **(ST) File names**
-There's a list of file, since two files cannot have equal names, the one which comes later will have a suffix **(k)**, where k is the smallest **integer** such that the found name is not used yet.
-Your task is to implement function that accepts **array** of names (`names`) and returns an **array** of names that will be given to the files.
+### **Имена файлов**
+Дан список файлов, и поскольку файлы не могут иметь одинаковых имен, те из них, которые создаются позже, будут иметь суффикс **(k)**, где k — наименьшее **целое число**, которое не использовалось с данным именем файла.
+Ваша задача — реализовать функцию, которая принимает **массив** имен (`names`) и возвращает **массив** имен, которые будут даны файлам.
 
-For example:
+Например:
 
 `renameFiles(["file", "file", "image", "file(1)", "file"])` => `["file", "file(1)", "image", "file(1)(1)", "file(2)"]`
 
-Write your code in `src/file-names.js`.
+Напишите свой код в `src/file-names.js`.
 
 ---
 
-### **(ST) Get email domain**
-Your task is to implement function that accepts email address (`email`) and returns it's **domain**.  
+### **Получить домен электронной почты**
+Ваша задача — реализовать функцию, которая принимает адрес электронной почты (`email`) и возвращает его **домен**.
 
-For example:
+Например:
 
 `getEmailDomain('prettyandsimple@example.com')` => `'example.com'`
 
-Write your code in `src/get-email-domain.js`.
+Напишите свой код в `src/get-email-domain.js`.
 
 ---
 
-### **(ST) Is MAC-48 Adress?**
-The **MAC-48 address** is six groups of two hexadecimal digits (0 to 9 or A to F) separated by hyphens.
-Your task is to implement function that accepts **string** (`inputString`) and returns `true` if **string** is valid **MAC-48 adress**.  
+### **MAC-48 адрес?**
+MAC-48 адрес — это шесть групп по 2 шестнадцатеричные цифры (от 0 до 9 или от A до F), разделенных дефисами.
+Ваша задача — реализовать функцию, которая принимает строку (`inputString`) и возвращает `true`, если строка является валидным MAC-48 адресом.
 
-For example:
+Например:
 
 `isMAC48Address('00-1B-63-84-45-E6')` => `true`
 
-Write your code in `src/mac-adress.js`.
+Напишите свой код в `src/mac-adress.js`.
 
 ---
 
-### **(ST) Matrix elements sum**
-Given **matrix**, a rectangular matrix of **integers**, just add up all the values that **don't appear below a "0"**.
+### **Сумма элементов матрицы**
+Дана прямоугольная **матрица** **целых чисел**, просто сложите все значения, которые **не находятся под 0**.
 
-For example:
+Например:
 
 ```
 const matrix = [
@@ -397,14 +397,15 @@ const matrix = [
 getMatrixElementsSum(matrix) => 9
 ```
 
-Write your code in `src/matrix-elements-sum.js`.
+Напишите свой код в `src/matrix-elements-sum.js`.
 
 ---
 
-### **(ST) Minesweeper**
-In the popular Minesweeper game you have a board with some mines and cells that have a **number** in it that indicates the total **number of mines** in the neighboring cells. Starting off with some arrangement of mines we want to create a Minesweeper game setup.
+### **Сапёр**
+В популярной игре "Сапёр" у вас есть поле с некоторым количеством мин и каждая клетка имеет число, которое показывает совокупное число мин в соседних с ней клетках.
+Получив поле с расставленными на нем минами (`true` — мина есть, `false` — мины нет) нам нужно создать поле игры "Сапёр".
 
-For example:
+Например:
 
 ```
 const matrix = [
@@ -420,52 +421,51 @@ minesweeper(matrix) => [
 ];
 ```
 
-Write your code in `src/mine-sweeper.js`.
+Напишите свой код в `src/mine-sweeper.js`.
 
 ---
 
-### **(ST) Sort by height**
-Given an array with heights, sort them except if the value is `-1`.
-Your task is to implement function that accepts **array** (`arr`) and returns it **sorted**
+### **Отссортировать по высоте**
+Дан массив с высотами, отсортируйте его, за исключением значений `-1`.
+Ваша задача — реализовать функцию, которая принимает **массив** (`arr`) и возвращает его **отсортированным**.
 
-For example:
+Например:
 
 `sortByHeight([-1, 150, 190, 170, -1, -1, 160, 180])` => `[-1, 150, 160, 170, -1, -1, 180, 190]`
 
-Write your code in `src/sort-by-height.js`.
+Напишите свой код в `src/sort-by-height.js`.
 
 ---
 
-### **(ST) Sum digits**
-Your task is to implement function that accepts a **number** (`n`) and returns the **sum of its digits** until we get to a **one digit number**.  
+### **Сумма цифр**
+Ваша задача — реализовать функцию, которая принимает **число** (`n`) и возвращает **сумму его цифр**, пока не получится **число из одной цифры**.
 
-For example:
+Например:
 
-For 100, the result should be 1 (1 + 0 + 0 = 1)  
+Для 100 результат должен быть 1 (1 + 0 + 0 = 1)  
 `getSumOfDigits(100)` => `1`
-
-For 91, the result should be 1 (9 + 1 = 10, 1 + 0 = 1)  
+Для 91, результат также должен быть 1 (9 + 1 = 10, 1 + 0 = 1)  
 `getSumOfDigits(91)` => `1`
 
-Write your code in `src/sum-digits.js`.
-
----
+Напишите свой код в `src/sum-digits.js`.
 
 © [AlreadyBored](https://github.com/alreadybored)  
 
-& tasks:
-* Common character count
-* Delete digit
-* DNS stat
-* Encode line
-* File names
-* Get email domain
-* Is MAC-48 Adress?
-* Matrix elements sum
-* Minesweeper
-* Sort by height
-* Sum digits
+& задачи
+* Сосчитать общие символы
+* Удалить цифру
+* Доменные имена
+* Закодируйте строку
+* Имена файлов
+* Получить домен электронной почты
+* MAC-48 адрес?
+* Сумма элементов матрицы
+* Сапёр
+* Отссортировать по высоте
+* Сумма цифр
 
-are integrated from [Short track 2021 repo](https://github.com/rkhaslarov/rs-school-short-track-2021)
+интегрированы из [Short track 2021 repo](https://github.com/rkhaslarov/rs-school-short-track-2021)
 
-& Thanks [mikhama](https://github.com/mikhama) for assistance!
+& Спасибо [mikhama](https://github.com/mikhama) за помощь!
+
+///
