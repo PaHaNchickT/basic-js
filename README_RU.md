@@ -467,3 +467,5 @@ minesweeper(matrix) => [
 интегрированы из [Short track 2021 repo](https://github.com/rkhaslarov/rs-school-short-track-2021)
 
 & Спасибо [mikhama](https://github.com/mikhama) за помощь!
+
+///
