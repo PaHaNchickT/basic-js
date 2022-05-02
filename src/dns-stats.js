@@ -27,7 +27,6 @@ const { NotImplementedError } = require('../extensions/index.js');
   input.forEach((e, i) => {
     let element = e.split('.')
     element.reverse()
-    let part = []
     let piece = ''
     element.forEach(el => {
       piece = piece+'.'+el
