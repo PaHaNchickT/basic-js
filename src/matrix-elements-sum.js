@@ -16,9 +16,37 @@ const { NotImplementedError } = require('../extensions/index.js');
  *
  * The result should be 9
  */
-function getMatrixElementsSum(/* matrix */) {
-  throw new NotImplementedError('Not implemented');
-  // remove line with error and write your code here
+ function getMatrixElementsSum(neo) {
+  let i = 0
+  let j = 0
+  let all = {}
+  let out = 0
+  neo.forEach(e1 => {
+    i = 0
+    e1.forEach(e2 => {
+      if (e2 === 0 && all[`${i}${j}`] === undefined) {
+          all[`${i}${j}`] = 0
+      } else if (e2 === 0 && all[`${i}${j}`] !== undefined) {
+        all[`${i}${j}`] = all[`${i}${j}`] + 1
+      }
+      i++
+    })
+    j++
+  })
+  i = 0
+  j = 0
+  neo.forEach(e1 => {
+    i = 0
+    e1.forEach(e2 => {
+      if (all[`${i}${j-1}`] === 0) {
+      } else {
+        out = out+e2
+      }
+      i++
+    })
+    j++
+  })
+  return out
 }
 
 module.exports = {
